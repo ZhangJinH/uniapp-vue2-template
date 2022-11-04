@@ -43,6 +43,9 @@ export const authDownload = () => {
 }
 export const authUpload = () => {
   return HTTP.upload({
-    url: '/auth/upload'
+    url: '/auth/upload',
+    name: 'file',
+    filePath:
+      'https://www4.bing.com//th?id=OHR.TeaPlantationsMunnar_ZH-CN7007323849_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp&w=240&h=135'
   })
 }

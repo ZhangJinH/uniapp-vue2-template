@@ -19,8 +19,9 @@ const requestTimeoutTime = 10000
 
 // 获取消息提示信息
 function getMessage(result) {
+  if (!result) return '系统异常'
   const code = result.code
-  return ErrorCode(code) || result.message
+  return ErrorCode[code] || result.message
 }
 
 // 全局配置
@@ -53,7 +54,8 @@ http.interceptors.response.use(
     return response
   },
   async response => {
-    if (response.statusCode === 401) {
+    const token = uni.getStorageSync('token')
+    if (response.statusCode === 401 && token) {
       const config = response.config
       if (!isRefreshing) {
         isRefreshing = true

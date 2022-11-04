@@ -2,7 +2,7 @@ const customProxy = {}
 
 const urls = {
   devURL: {
-    source1: 'http://127.0.0.1:7002',
+    source1: 'http://127.0.0.1:7001',
     source2: 'http://dev.source2.com'
   },
   testURL: {
