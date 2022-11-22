@@ -1,0 +1,17 @@
+@mixin bgImage($url) {
+	background-image: url($url);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+@mixin safeBottomPosition($ins) {
+	bottom: $ins;
+	bottom: calc(constant(safe-area-inset-bottom) + $ins);
+	bottom: calc(env(safe-area-inset-bottom) + $ins);
+}
+
+@mixin safeBottomPadding($ins) {
+	padding-bottom: $ins;
+	padding-bottom: calc(constant(safe-area-inset-bottom) + $ins);
+	padding-bottom: calc(env(safe-area-inset-bottom) + $ins);
+}

@@ -18,6 +18,12 @@
       "style": {
         "navigationBarTitleText": "请求"
       }
+    },
+    {
+      "path": "pages/images/index",
+      "style": {
+        "navigationBarTitleText": "图片"
+      }
     }
   ],
   "globalStyle": {
